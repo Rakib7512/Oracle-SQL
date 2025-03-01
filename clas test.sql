@@ -34,7 +34,7 @@ FROM employees
 WHERE commission_pct =0.20;
 
 
-SELECT employee_id, LAST_NAME, SALARY,salary+(salary*.155) as"New Salary"
+SELECT employee_id, LAST_NAME, SALARY,round(salary+(salary*.155))as"New Salary"
 FROM employees;
 
 
