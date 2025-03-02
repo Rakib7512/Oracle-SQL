@@ -103,11 +103,29 @@ from dual;
 
 
 
-SELECT LAST_NAME, SALARY
+SELECT LAST_NAME, SALARY,concat('BDT',
+substr(
+to_char(salary*40,'$9,999,999.00'),
+instr(
+to
+_char
+FROM employees;
+
+
+
+SELECT LAST_NAME, commission_pct, nvl(commission_pct,0)
+FROM employees;
 
 
 
 
+SELECT LAST_NAME, commission_pct, nvl2(commission_pct,commission_pct,0)
+FROM employees;
+
+
+SELECT LAST_NAME,salary, commission_pct
+
+FROM employees;
 
 
 
