@@ -1,43 +1,42 @@
 
-SELECT LAST_NAME, SALARY
-FROM employees
-WHERE salary NOT BETWEEN 5000 AND 12000;
 
 
-SELECT LAST_NAME, department_id
-FROM employees
-WHERE department_id = 20
-OR DEPARTMENT_ID=50
-order by last_name;
+select last_name,hire_date
+from employees
+WHERE hire_date between '01-JAN-02' and '31-DEC-05';
 
 
-SELECT LAST_NAME AS"Employees", salary as "Monthly salary"
-FROM employees
-WHERE salary BETWEEN 5000 AND 12000 
-AND department_id= 20 
-OR department_id= 50;
+select first_name,hire_date
+from employees
+where job_id like 'IT_PROG' or job_id LIKE 'SA_MAN';
 
-
-
-
-SELECT LAST_NAME, SALARY,commission_pct
-FROM employees
-order by SALARY desc,LAST_NAME desc, commission_pct desc;
+  
+select first_name,hire_date
+from employees
+where job_id in('IT_PROG','SA_MAN');
   
   
   
+  
+select employee_id,hire_date
+from employees
+where hire_date>'01-JAN-08';
+
+
+select last_name, employee_id
+from employees
+where  employee_id=150 or employee_id=160;
 
 
 
-SELECT LAST_NAME, SALARY,commission_pct
-FROM employees
-WHERE commission_pct =0.20;
-
-
-SELECT employee_id, LAST_NAME, SALARY,round(salary+(salary*.155))as"New Salary"
-FROM employees;
+select last_name, employee_id
+from employees
+where  employee_id in(150,160)
 
 
 
 
 
+select first_name, salary,commission_pct,hire_date
+from employees
+where salary>10000;

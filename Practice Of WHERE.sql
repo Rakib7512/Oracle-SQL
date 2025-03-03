@@ -103,6 +103,37 @@ from dual;
 
 
 
+
+
+select last_name,hire_date
+from employees
+WHERE hire_date like '%02' OR hire_date like '%05'
+order by 2;
+
+select first_name,hire_date
+from employees
+where job_id like 'IT_PROG' or job_id LIKE 'SA_MAN';
+
+
+select employee_id,hire_date
+from employees
+where hire_date<'01-JAN-08';
+
+
+select last_name, employee_id
+from employees
+where  employee_id=150 or employee_id=160;
+
+
+
+select first_name, salary,commission_pct,hire_date
+from employees
+where salary>10000;
+
+
+
+
+
 SELECT LAST_NAME, SALARY,concat('BDT',
 substr(
 to_char(salary*40,'$9,999,999.00'),
@@ -130,9 +161,29 @@ FROM employees;
 
 
 
+select last_name,job_id, salary,
+
+case job_id when 'IT_PROG' then 1.10*salary
+when 'ST_CLEARK' then 1.15*salary
+else salary end "NEW Salary"
+from employees;
+
+
+select last_name,job_id, salary,
+DECODE(
+'IT_PROG, 1.10',
+'ST_CLEARK,1.15',
+eals salary end 
+)
+from employees;
 
 
 
 
+SELECT department_id, MAX(AVG(SALARY))
+FROM employees
+group by department_id
+order by 2
+FETCH FIRST 1 ROWS ONLY;
 
 
