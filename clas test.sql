@@ -40,3 +40,8 @@ where  employee_id in(150,160)
 select first_name, salary,commission_pct,hire_date
 from employees
 where salary>10000;
+
+
+
+
+
