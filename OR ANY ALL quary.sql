@@ -77,11 +77,7 @@ FROM EMPLOYEES
  (SELECT JOB_ID FROM EMPLOYEES WHERE EMPLOYEE_ID IN
         (SELECT EMPLOYEE_ID FROM JOB_HISTORY WHERE JOB_ID='IT_PROG'))
         
-        
-        
-        
-
-        select department_id,job_id
+select department_id,job_id
         from employees
         where employee_id in(select employee_id
         from job_history
