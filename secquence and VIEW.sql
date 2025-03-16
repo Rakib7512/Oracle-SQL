@@ -75,5 +75,17 @@ INSERT INTO emp0011 VALUES (emp0011_Eid_seq.nextval,'Abdullah',8000,'01-JAN-08',
 
 
 
+select job_id
+from employees
+where department_id in(select department_id
+                from employees
+                where salary>1000);
+
+
+select salary
+                from employees
+                where salary>1000;
+
+
 SELECT
     * FROM emp0011;
