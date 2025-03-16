@@ -71,7 +71,7 @@ nocycle;
 
 SELECT
     * FROM emp0011;
-INSERT INTO emp0011 VALUES (emp0011_Eid_seq.nextval'Abdullah',8000,'01-JAN-08','sangkor','JEE');
+INSERT INTO emp0011 VALUES (emp0011_Eid_seq.nextval,'Abdullah',8000,'01-JAN-08','sangkor','JEE','80');
 
 
 
